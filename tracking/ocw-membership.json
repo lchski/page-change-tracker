@@ -10,13 +10,12 @@
       "sku": "",
       "price": 165,
       "currency_code": "CAD",
-      "in_stock": true
+      "in_stock": false
     }
   ],
   "thumbnail_url": "//cdn.shopify.com/s/files/1/0876/8810/products/CommunityMembership.png?v=1555154464",
   "url": "https://ottawacitywoodshop.com/products/community-membership",
   "provider": "Ottawa City Woodshop",
   "version": "1.0",
-  "type": "link",
-  "debug": "fake change"
+  "type": "link"
 }
