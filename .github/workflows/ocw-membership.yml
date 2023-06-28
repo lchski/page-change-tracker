@@ -1,0 +1,68 @@
+# Merci Simon: https://simonwillison.net/2022/Apr/28/issue-on-changes/
+name: Track the Starlette version of this
+
+# Run on repo pushes, and if a user clicks the "run this action" button,
+# and on a schedule once an hour at :13 (roughly)
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+  - cron:  '13 * * * *' # https://crontab.guru/#13_*_*_*_*
+
+# Without this block I got this error when the action ran:
+# HttpError: Resource not accessible by integration
+permissions:
+  # Allow the action to create issues
+  issues: write
+  # Allow the action to commit back to the repository
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/github-script@v6
+      # Using env: here to demonstrate how an action like this can
+      # be adjusted to take dynamic inputs
+      env:
+        URL: https://ottawacitywoodshop.com/products/community-membership.oembed
+        FILE_NAME: tracking/ocw-membership.json
+      with:
+        script: |
+          const { URL, FILE_NAME } = process.env;
+          // promisify pattern for getting an await version of child_process.exec
+          const util = require("util");
+          // Used exec_ here because 'exec' variable name is already used:
+          const exec_ = util.promisify(require("child_process").exec);
+          // Use curl to download the file
+          await exec_(`curl -o ${FILE_NAME} ${URL}`);
+          // Use 'git diff' to detect if the file has changed since last time
+          const { stdout } = await exec_(`git diff ${FILE_NAME}`);
+          if (stdout) {
+            // There was a diff to that file
+            const title = `${FILE_NAME} was updated`;
+            const body =
+              `${URL} changed:` +
+              "\n\n```diff\n" +
+              stdout +
+              "\n```\n\n" +
+              "Close this issue once those changes have been integrated here";
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+            });
+            const issueNumber = issue.data.number;
+            // Now commit and reference that issue number, so the commit shows up
+            // listed at the bottom of the issue page
+            const commitMessage = `${FILE_NAME} updated, refs #${issueNumber}`;
+            // https://til.simonwillison.net/github-actions/commit-if-file-changed
+            await exec_(`git config user.name "Automated"`);
+            await exec_(`git config user.email "actions@users.noreply.github.com"`);
+            await exec_(`git add -A`);
+            await exec_(`git commit -m "${commitMessage}" || exit 0`);
+            await exec_(`git pull --rebase`);
+            await exec_(`git push`);
+          }
