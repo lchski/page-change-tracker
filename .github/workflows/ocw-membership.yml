@@ -1,5 +1,5 @@
 # Merci Simon: https://simonwillison.net/2022/Apr/28/issue-on-changes/
-name: Track the Starlette version of this
+name: Check if OCW Membership page has changed
 
 # Run on repo pushes, and if a user clicks the "run this action" button,
 # and on a schedule once an hour at :13 (roughly)
