@@ -1,1 +1,21 @@
-{"product_id":"community-membership","title":"Community Membership","description":"\u003cmeta charset=\"utf-8\"\u003e\u003cmeta charset=\"utf-8\"\u003e\n\u003cp\u003eCome work on all your own projects independently in our fully equipped woodshop!\u003cbr\u003e\u003cb\u003e\u003c\/b\u003e\u003c\/p\u003e\n\u003cp\u003e\u003cbr\u003eCommunity memberships are based on access for 1 month. Members are entitled to unlimited access to the shop during operating hours (about 25 hours\/week and close to 100 hours\/month) over the course of the month. \u003c\/p\u003e\n\u003cmeta charset=\"utf-8\"\u003e\n\u003cp\u003eThe shop is staffed with a qualified and trained supervisor ready to help you turn your projects into a reality while working safely and confidently. \u003c\/p\u003e\n\u003cp\u003eThe shop provides basic space for members to store work in progress, and an option to rent more space should you require it for larger projects. We also have a well-stocked selection of necessary supplies and materials available for purchase. \u003c\/p\u003e\n\u003cmeta charset=\"utf-8\"\u003e\n\u003cp\u003e\u003cspan data-mce-fragment=\"1\"\u003eAll new members are required to complete the 'Woodshop Basics' course.  New members will be given additional information on OCW rules and procedures during one of their first visits to the shop. \u003c\/span\u003e\u003c\/p\u003e\n\u003cmeta charset=\"utf-8\"\u003e\n\u003cp\u003e\u003cstrong\u003eDetails\u003c\/strong\u003e\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eMembership becomes effective once it is purchased online.\u003c\/li\u003e\n\u003cli\u003ePlease ensure you've previously taken part in a Woodshop Basics course prior to purchasing a membership. \u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003eShop hours\u003c\/strong\u003e \u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eMonday - Wednesday: 5:30pm - 10:00pm\u003c\/li\u003e\n\u003cli\u003eSunday: 9:00am - 6:00pm\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e \u003c\/p\u003e","brand":"Ottawa City Woodshop","offers":[{"title":"Default Title","offer_id":34353842182,"sku":"","price":165.0,"currency_code":"CAD","in_stock":false}],"thumbnail_url":"\/\/cdn.shopify.com\/s\/files\/1\/0876\/8810\/products\/CommunityMembership.png?v=1555154464","url":"https:\/\/ottawacitywoodshop.com\/products\/community-membership","provider":"Ottawa City Woodshop","version":"1.0","type":"link"}
+{
+  "product_id": "community-membership",
+  "title": "Community Membership",
+  "description": "<meta charset=\"utf-8\"><meta charset=\"utf-8\">\n<p>Come work on all your own projects independently in our fully equipped woodshop!<br><b></b></p>\n<p><br>Community memberships are based on access for 1 month. Members are entitled to unlimited access to the shop during operating hours (about 25 hours/week and close to 100 hours/month) over the course of the month. </p>\n<meta charset=\"utf-8\">\n<p>The shop is staffed with a qualified and trained supervisor ready to help you turn your projects into a reality while working safely and confidently. </p>\n<p>The shop provides basic space for members to store work in progress, and an option to rent more space should you require it for larger projects. We also have a well-stocked selection of necessary supplies and materials available for purchase. </p>\n<meta charset=\"utf-8\">\n<p><span data-mce-fragment=\"1\">All new members are required to complete the 'Woodshop Basics' course.  New members will be given additional information on OCW rules and procedures during one of their first visits to the shop. </span></p>\n<meta charset=\"utf-8\">\n<p><strong>Details</strong></p>\n<ul>\n<li>Membership becomes effective once it is purchased online.</li>\n<li>Please ensure you've previously taken part in a Woodshop Basics course prior to purchasing a membership. </li>\n</ul>\n<p><strong>Shop hours</strong> </p>\n<ul>\n<li>Monday - Wednesday: 5:30pm - 10:00pm</li>\n<li>Sunday: 9:00am - 6:00pm</li>\n</ul>\n<p> </p>",
+  "brand": "Ottawa City Woodshop",
+  "offers": [
+    {
+      "title": "Default Title",
+      "offer_id": 34353842182,
+      "sku": "",
+      "price": 165,
+      "currency_code": "CAD",
+      "in_stock": false
+    }
+  ],
+  "thumbnail_url": "//cdn.shopify.com/s/files/1/0876/8810/products/CommunityMembership.png?v=1555154464",
+  "url": "https://ottawacitywoodshop.com/products/community-membership",
+  "provider": "Ottawa City Woodshop",
+  "version": "1.0",
+  "type": "link"
+}
