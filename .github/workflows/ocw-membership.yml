@@ -36,6 +36,7 @@ jobs:
           // Used exec_ here because 'exec' variable name is already used:
           const exec_ = util.promisify(require("child_process").exec);
           // Use curl to download the file
+          // then, prettyprint JSON (https://stackoverflow.com/a/66882961) and save to repo
           await exec_(`curl -s ${URL} | npx -q json > ${FILE_NAME}`);
           // Use 'git diff' to detect if the file has changed since last time
           const { stdout } = await exec_(`git diff ${FILE_NAME}`);
@@ -46,8 +47,7 @@ jobs:
               `${URL} changed:` +
               "\n\n```diff\n" +
               stdout +
-              "\n```\n\n" +
-              "Close this issue once those changes have been integrated here";
+              "\n```\n\n";
             const issue = await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
