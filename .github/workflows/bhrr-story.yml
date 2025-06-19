@@ -7,7 +7,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-  - cron:  '13 * * * *' # https://crontab.guru/#13_*_*_*_*
+  - cron:  '05 * * * *' # https://crontab.guru/#13_*_*_*_*
 
 # Without this block I got this error when the action ran:
 # HttpError: Resource not accessible by integration
